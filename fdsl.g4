@@ -1,30 +1,33 @@
 grammar fdsl;
 
 //Parse Rules
-program : featureDefinitions EOF;
+program : feats EOF;
 
-featureDefinitions : featureDefinition+;
+feats : feat+;
 
-featureDefinition : 'feature:' featureName '=' expression;
+feat : 'feature:' name '=' expr;
 
-featureName : IDENTIFIER;
+name : IDENTIFIER;
 
-expression : logicalExpression;
+expr : logicExpr;
 
 // AND, OR
-logicalExpression : comparisonExpression (LOGICAL_OP comparisonExpression)*;
+logicExpr : cmpExpr (LOGICAL_OP cmpExpr)*;
 
 // >, <, ==, ...
-comparisonExpression : arithmeticExpression (COMPARE_OP arithmeticExpression)?;
+cmpExpr  : arithExpr  (COMPARE_OP arithExpr )?;
 
+//these two at the bottom are told to be better but im using kawan's style
 // +, -
-arithmeticExpression : term (('+' | '-') term)*;
+//arithExpr  : term (('+' | '-') term)*;
+arithExpr : arithExpr  ('+'|'-') term | term;
 
 // *, /
-term : factor (('*' | '/') factor)*;
+//term : factor (('*' | '/') factor)*;
+term: term ('*'|'/') factor | factor;
 
 // num, var or anotha expr
-factor : NUMBER | IDENTIFIER | '(' expression ')';
+factor : NUMBER | IDENTIFIER | '(' expr  ')';
 //bucket va ... ezafe konim? masalan to python bucket(age, [18, 25, 35])
 
 
