@@ -1,0 +1,4 @@
+feature: is_active = days_since_last_login < 30
+feature: loyal_user = orders > 5 AND days_since_last_order < 60
+feature: night_user = hour(last_login) > 20
+feature: avg_order_high = (total_spent / order_count) > 75
