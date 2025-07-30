@@ -12,10 +12,10 @@ name : IDENTIFIER;
 expr : logicExpr;
 
 // AND, OR
-logicExpr : cmpExpr (LOGICAL_OP cmpExpr)*;
+logicExpr : cmpExpr (logicalOp cmpExpr)*;
 
 // >, <, ==, ...
-cmpExpr  : arithExpr  (COMPARE_OP arithExpr )?;
+cmpExpr  : arithExpr  (compareOp  arithExpr )?;
 
 //these two at the bottom are told to be better but im using kawan's style
 // +, -
@@ -27,10 +27,12 @@ arithExpr : arithExpr  ('+'|'-') term | term;
 term: term ('*'|'/') factor | factor;
 
 // num, var or anotha expr
-factor : NUMBER | IDENTIFIER | '(' expr  ')';
+factor : NUMBER | IDENTIFIER | '(' expr  ')' | IDENTIFIER '(' expr ')';
 //bucket va ... ezafe konim? masalan to python bucket(age, [18, 25, 35])
 
+compareOp : COMPARE_OP;
 
+logicalOp : LOGICAL_OP;
 
 // Lexer Rules
 // (in this niggas AST will be removed if called directly brothers)
