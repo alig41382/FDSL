@@ -1,2 +1,3 @@
 feature: is_active = days_since_last_login < 30
-feature: avg_order_high = (total_spent / order_count) > 75
+feature: low_spender = total_spent < 100
+feature: no_recent_support = support_tickets_last_90d == 0
