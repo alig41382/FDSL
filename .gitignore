@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # PyCharm project files
-.idea/
+.idea
 
 # VS Code settings (if used)
 .vscode/
