@@ -1,11 +1,11 @@
-# JSONGenerator.py
-# Reason: you’re collecting all stack operands. Only keep identifiers (real column names).
+# collections.OrderedDict() to maintain insertion order and avoid duplicates.
+from collections import OrderedDict
 import json
 
 class JSONGenerator:
     def __init__(self):
         self.features = []
-        self.inputs = set()
+        self.inputs = OrderedDict()
         self.operators = {'<', '>', '==', '<=', '>=', '!=', '+', '-', '*', '/', 'AND', 'OR'}
 
     def generate(self, traversal):
@@ -15,32 +15,27 @@ class JSONGenerator:
 
         for token in traversal:
             if token == 'FeatureDefinition':
-                _ = stack.pop()          # expression (ignored)
+                _ = stack.pop()
                 feature = stack.pop()
-                # strip df["..."] if it appears
                 if feature.startswith('df["') and feature.endswith('"]'):
                     feature = feature[4:-2]
                 self.features.append(feature)
-
             elif token in self.operators:
                 right = stack.pop()
                 left = stack.pop()
-                # collect only identifiers as inputs
                 for t in (left, right):
-                    # strip df["..."] if needed
                     if t.startswith('df["') and t.endswith('"]'):
                         t = t[4:-2]
-                    if t.isidentifier():
-                        self.inputs.add(t)
+                    if t.isidentifier() and t not in self.features:
+                        self.inputs[t] = "number"
                 stack.append(f"({left} {token} {right})")
-
             elif token not in {'begin_scope_operator', 'end_scope_operator', 'program', 'feats'}:
                 stack.append(token)
 
-        input_schema = {name: "number" for name in self.inputs if name not in self.features}
-        output = {"input": input_schema, "features": self.features}
-        return json.dumps(output, indent=2)
-
+        return json.dumps({
+            "input": self.inputs,
+            "features": self.features
+        }, indent=2)
 
 # import json
 #
