@@ -1,0 +1,10 @@
+features:
+  - name: is_active
+    drift_check: ks_test
+    threshold: 0.05
+  - name: low_spender
+    drift_check: js_divergence
+    threshold: 0.1
+  - name: no_recent_support
+    drift_check: psi
+    threshold: 0.07
