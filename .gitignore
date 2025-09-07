@@ -58,7 +58,7 @@ coverage.xml
 *.tokens
 *.g4.generated/
 .generated/
-gen/
+#gen/
 
 # Logs and dumps
 *.log
