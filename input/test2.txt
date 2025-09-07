@@ -1,0 +1,22 @@
+
+feature: is_recent_login = days_since_last_login < 14
+feature: active_last_month = monthly_sessions_last_30d > 5
+feature: multi_device_user = device_count > 1
+
+
+feature: avg_order_value = total_spent / total_orders
+feature: high_spender = total_spent > 1000
+feature: frequent_buyer = total_orders > 10
+feature: last_purchase_recent = days_since_last_purchase < 30
+
+
+feature: subscription_active = subscription_status == "active"
+feature: churn_risk = days_since_subscription_renewal > 45
+
+
+feature: frequent_complainer = support_tickets_last_90d > 3
+feature: unresolved_issues = open_support_tickets > 0
+
+
+feature: viewed_products_last_week = product_views_last_7d > 10
+feature: marketing_engaged = marketing_email_clicks_last_30d > 3

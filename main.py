@@ -86,6 +86,6 @@ def main(arguments):
 
 if __name__ == '__main__':
     argparser = argparse.ArgumentParser()
-    argparser.add_argument('-i', '--input', help='Input source', default=r'input/test1.txt')
+    argparser.add_argument('-i', '--input', help='Input source', default=r'input/test2.txt')
     args = argparser.parse_args()
     main(args)
