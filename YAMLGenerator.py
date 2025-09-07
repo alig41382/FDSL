@@ -18,11 +18,16 @@ class YAMLGenerator:
 
         for token in traversal:
             if token == 'FeatureDefinition':
-                expr = stack.pop()        # e.g. (x < 30)
-                left = stack.pop()        # e.g. x
-                right = stack.pop()       # e.g. 30
-                feature_name = stack.pop()  # finally get: 'is_active'
-                self.features.append(feature_name)
+                # Pop everything until only the feature name remains
+                expr_items = []
+                while stack:
+                    item = stack.pop()
+                    if stack and stack[-1] == 'FeatureDefinition':
+                        break
+                    expr_items.append(item)
+                if stack:
+                    feature_name = stack.pop()
+                    self.features.append(feature_name)
             elif token in {'begin_scope_operator', 'end_scope_operator', 'program', 'feats'}:
                 continue
             else:
