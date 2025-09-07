@@ -27,7 +27,7 @@ arithExpr : arithExpr  ('+'|'-') term | term;
 term: term ('*'|'/') factor | factor;
 
 // num, var or anotha expr
-factor : NUMBER | IDENTIFIER | '(' expr  ')' | IDENTIFIER '(' expr ')';
+factor : NUMBER | STRING  | BOOL  | IDENTIFIER | '(' expr  ')' | IDENTIFIER '(' expr ')';
 //bucket va ... ezafe konim? masalan to python bucket(age, [18, 25, 35])
 
 compareOp : COMPARE_OP;
@@ -42,6 +42,7 @@ LOGICAL_OP      : 'AND' | 'OR';
 NUMBER          : [0-9]+ ('.' [0-9]+)?;
 IDENTIFIER      : [a-zA-Z_] [a-zA-Z0-9_]*;
 STRING          : '"' .*? '"';
+BOOL : 'true' | 'false';
 
 // Whitespace/newlines
 WS              : [ \t\r\n]+ -> skip;
