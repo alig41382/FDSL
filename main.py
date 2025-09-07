@@ -123,7 +123,7 @@ def main(arguments):
 
 if __name__ == '__main__':
     argparser = argparse.ArgumentParser()
-    argparser.add_argument('-i', '--input', help='Input source', default=r'input/test1.txt')
+    argparser.add_argument('-i', '--input', help='Input source', default=r'input/test3.txt')
     argparser.add_argument('-o', '--out-dir', help='Directory to place all outputs (created if missing)')
     argparser.add_argument('-pyo', '--pyth-out', help='Output path for Python code')
     argparser.add_argument('-sqlo', '--sql-out', help='Explicit path for SQL output file (overrides --out-dir)')

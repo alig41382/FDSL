@@ -1,0 +1,23 @@
+
+feature: is_new_user = days_since_signup < 7
+feature: is_female = gender == "female"
+feature: locale_us = country == "US"
+feature: preferred_language = language == "en"
+
+
+feature: night_session = hour(last_session_time) > 21
+feature: active_user = login_days_last_30d > 15 AND total_time_spent > 500
+feature: power_user = (sessions / active_days) > 5
+
+
+feature: high_value_order = last_order_amount > 1000
+feature: frequent_buyer = total_orders >= 10
+feature: recently_purchased = days_since_last_purchase <= 3
+
+
+feature: is_subscribed = subscription_status == "active"
+feature: renewal_due = days_until_renewal <= 5
+feature: paid_user = payment_type == "credit_card"
+
+feature: many_tickets = support_ticket_count > 5
+feature: complaint_keyword = last_ticket_text == "refund"
