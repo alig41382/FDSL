@@ -22,7 +22,7 @@ arithExpr : arithExpr  ('+'|'-') term | term;
 
 term: term ('*'|'/') factor | factor;
 
-factor : NUMBER | STRING | BOOL | IDENTIFIER | '(' expr  ')' | IDENTIFIER '(' expr (',' expr)* ')'; //multi arg func
+factor : NUMBER | STRING | BOOL | IDENTIFIER | '(' expr  ')';
 //bucket va ... ezafe konim? masalan to python bucket(age, [18, 25, 35])
 compareOp : COMPARE_OP;
 
