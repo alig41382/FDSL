@@ -17,6 +17,5 @@ feature: churn_risk = days_since_subscription_renewal > 45
 feature: frequent_complainer = support_tickets_last_90d > 3
 feature: unresolved_issues = open_support_tickets > 0
 
-
 feature: viewed_products_last_week = product_views_last_7d > 10
 feature: marketing_engaged = marketing_email_clicks_last_30d > 3

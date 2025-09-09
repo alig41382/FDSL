@@ -5,7 +5,6 @@ feature: locale_us = country == "US"
 feature: preferred_language = language == "en"
 
 
-feature: night_session = hour(last_session_time) > 21
 feature: active_user = login_days_last_30d > 15 AND total_time_spent > 500
 feature: power_user = (sessions / active_days) > 5
 
@@ -21,5 +20,3 @@ feature: paid_user = payment_type == "credit_card"
 
 feature: many_tickets = support_ticket_count > 5
 feature: complaint_keyword = last_ticket_text == "refund"
-
-feature: is_active2 = max( 1 , 2 ) < 100

@@ -13,7 +13,6 @@ class JSONGenerator:
         stack = []
 
         def infer_type(value):
-            """Infer the type of a literal value."""
             if value in {'true', 'false'}:
                 return "boolean"
             elif value.startswith('"') and value.endswith('"'):
@@ -25,7 +24,6 @@ class JSONGenerator:
                 return None
 
         def infer_result_type(left, right, operator):
-            """Infer the type of an expression result based on operands and operator."""
             left_type = self.types.get(left, infer_type(left))
             right_type = self.types.get(right, infer_type(right))
 
@@ -63,18 +61,16 @@ class JSONGenerator:
                     self.features.append(feature)
             elif token in self.operators:
                 if len(stack) < 2:
-                    continue  # Invalid traversal, skip
+                    continue
                 right = stack.pop()
                 left = stack.pop()
 
-                # Infer types for variables based on the other operand
                 for var, other in [(left, right), (right, left)]:
                     if var.isidentifier() and var not in self.features and var not in self.types:
                         inferred_type = infer_type(other)
                         if inferred_type:
                             self.types[var] = inferred_type
 
-                # Infer the type of the expression result
                 result_type = infer_result_type(left, right, token)
                 if result_type:
                     # Store the expression with its inferred type
@@ -83,18 +79,15 @@ class JSONGenerator:
                         self.types[expression] = result_type
                     stack.append(expression)
                 else:
-                    # Push expression back without type if inference fails
                     stack.append(f"({left} {token} {right})")
             elif token not in {'begin_scope_operator', 'end_scope_operator', 'program', 'feats'}:
                 stack.append(token)
 
-        # Create input schema, excluding features and expressions
         input_schema = {
             name: self.types[name] for name in self.types
             if name.isidentifier() and name not in self.features
         }
 
-        # Remove any variables with no inferred type
         input_schema = {k: v for k, v in input_schema.items() if v is not None}
 
         return json.dumps({

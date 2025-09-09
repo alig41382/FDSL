@@ -11,9 +11,6 @@ features:
   - name: preferred_language
     drift_check: kl_divergence
     threshold: 0.08
-  - name: night_session
-    drift_check: kl_divergence
-    threshold: 0.08
   - name: total_time_spent
     drift_check: kl_divergence
     threshold: 0.08
@@ -42,8 +39,5 @@ features:
     drift_check: kl_divergence
     threshold: 0.08
   - name: complaint_keyword
-    drift_check: kl_divergence
-    threshold: 0.08
-  - name: 2
     drift_check: kl_divergence
     threshold: 0.08

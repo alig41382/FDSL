@@ -26,6 +26,8 @@ class PythonGenerator:
     def emit_assignment(self):
         value = self.stack.pop()
         feature = self.stack.pop()
+        if feature.startswith('df["') and feature.endswith('"]'):
+            feature = feature[4:-2]
         self.generated_lines.append(f'df["{feature}"] = {value}')
 
     def emit_binary(self, operator):
@@ -44,11 +46,11 @@ class PythonGenerator:
         if token in {'true', 'false'}:
             return token.capitalize()  # True / False
         elif token.startswith('"') and token.endswith('"'):
-            return token  # String literals → "active"
+            return token  # e.g., "female"
         elif token.replace('.', '', 1).isdigit():
-            return token #int or float as-is
+            return token
         elif token.isidentifier():
-            return f'df["{token}"]' # Identifiers (e.g. days_since_login) → becomes df["days_since_login"]
+            return f'df["{token}"]'
         else:
             return token
 
