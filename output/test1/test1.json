@@ -1,0 +1,12 @@
+{
+  "input": {
+    "days_since_last_login": "number",
+    "total_spent": "number",
+    "support_tickets_last_90d": "number"
+  },
+  "features": [
+    "is_active",
+    "low_spender",
+    "no_recent_support"
+  ]
+}

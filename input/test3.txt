@@ -21,3 +21,5 @@ feature: paid_user = payment_type == "credit_card"
 
 feature: many_tickets = support_ticket_count > 5
 feature: complaint_keyword = last_ticket_text == "refund"
+
+feature: is_active2 = max( 1 , 2 ) < 100

@@ -1,0 +1,49 @@
+features:
+  - name: is_new_user
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: is_female
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: locale_us
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: preferred_language
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: night_session
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: total_time_spent
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: active_days
+    drift_check: ks_test
+    threshold: 0.05
+  - name: high_value_order
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: frequent_buyer
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: recently_purchased
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: is_subscribed
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: renewal_due
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: paid_user
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: many_tickets
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: complaint_keyword
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: 2
+    drift_check: kl_divergence
+    threshold: 0.08

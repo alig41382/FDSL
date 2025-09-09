@@ -1,0 +1,40 @@
+features:
+  - name: is_recent_login
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: active_last_month
+    drift_check: ks_test
+    threshold: 0.05
+  - name: multi_device_user
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: avg_order_value
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: high_spender
+    drift_check: js_divergence
+    threshold: 0.1
+  - name: frequent_buyer
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: last_purchase_recent
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: subscription_active
+    drift_check: ks_test
+    threshold: 0.05
+  - name: churn_risk
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: frequent_complainer
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: unresolved_issues
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: viewed_products_last_week
+    drift_check: kl_divergence
+    threshold: 0.08
+  - name: marketing_engaged
+    drift_check: kl_divergence
+    threshold: 0.08

@@ -1,0 +1,31 @@
+{
+  "input": {
+    "days_since_last_login": "number",
+    "monthly_sessions_last_30d": "number",
+    "device_count": "number",
+    "total_spent": "number",
+    "total_orders": "number",
+    "days_since_last_purchase": "number",
+    "subscription_status": "string",
+    "days_since_subscription_renewal": "number",
+    "support_tickets_last_90d": "number",
+    "open_support_tickets": "number",
+    "product_views_last_7d": "number",
+    "marketing_email_clicks_last_30d": "number"
+  },
+  "features": [
+    "is_recent_login",
+    "active_last_month",
+    "multi_device_user",
+    "avg_order_value",
+    "high_spender",
+    "frequent_buyer",
+    "last_purchase_recent",
+    "subscription_active",
+    "churn_risk",
+    "frequent_complainer",
+    "unresolved_issues",
+    "viewed_products_last_week",
+    "marketing_engaged"
+  ]
+}

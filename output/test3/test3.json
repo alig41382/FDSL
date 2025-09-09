@@ -1,0 +1,38 @@
+{
+  "input": {
+    "days_since_signup": "number",
+    "gender": "string",
+    "country": "string",
+    "language": "string",
+    "last_session_time": "number",
+    "login_days_last_30d": "number",
+    "total_time_spent": "number",
+    "last_order_amount": "number",
+    "total_orders": "number",
+    "days_since_last_purchase": "number",
+    "subscription_status": "string",
+    "days_until_renewal": "number",
+    "payment_type": "string",
+    "support_ticket_count": "number",
+    "last_ticket_text": "string",
+    "factor": "number"
+  },
+  "features": [
+    "is_new_user",
+    "is_female",
+    "locale_us",
+    "preferred_language",
+    "night_session",
+    "active_user",
+    "power_user",
+    "high_value_order",
+    "frequent_buyer",
+    "recently_purchased",
+    "is_subscribed",
+    "renewal_due",
+    "paid_user",
+    "many_tickets",
+    "complaint_keyword",
+    "2"
+  ]
+}

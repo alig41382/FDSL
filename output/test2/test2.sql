@@ -1,0 +1,13 @@
+CASE WHEN days_since_last_login < 14 THEN TRUE ELSE FALSE END AS is_recent_login,
+CASE WHEN monthly_sessions_last_30d > 5 THEN TRUE ELSE FALSE END AS active_last_month,
+CASE WHEN device_count > 1 THEN TRUE ELSE FALSE END AS multi_device_user,
+CASE WHEN CASE WHEN total_orders = 0 THEN NULL ELSE total_spent / total_orders END THEN TRUE ELSE FALSE END AS avg_order_value,
+CASE WHEN total_spent > 1000 THEN TRUE ELSE FALSE END AS high_spender,
+CASE WHEN total_orders > 10 THEN TRUE ELSE FALSE END AS frequent_buyer,
+CASE WHEN days_since_last_purchase < 30 THEN TRUE ELSE FALSE END AS last_purchase_recent,
+CASE WHEN subscription_status = 'active' THEN TRUE ELSE FALSE END AS subscription_active,
+CASE WHEN days_since_subscription_renewal > 45 THEN TRUE ELSE FALSE END AS churn_risk,
+CASE WHEN support_tickets_last_90d > 3 THEN TRUE ELSE FALSE END AS frequent_complainer,
+CASE WHEN open_support_tickets > 0 THEN TRUE ELSE FALSE END AS unresolved_issues,
+CASE WHEN product_views_last_7d > 10 THEN TRUE ELSE FALSE END AS viewed_products_last_week,
+CASE WHEN marketing_email_clicks_last_30d > 3 THEN TRUE ELSE FALSE END AS marketing_engaged
