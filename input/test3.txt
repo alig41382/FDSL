@@ -5,7 +5,7 @@ feature: locale_us = country == "US"
 feature: preferred_language = language == "en"
 
 
-feature: night_session = hour(last_session_time) > 21
+feature: night_session = last_session_time > 21
 feature: active_user = login_days_last_30d > 15 AND total_time_spent > 500
 feature: power_user = (sessions / active_days) > 5
 
