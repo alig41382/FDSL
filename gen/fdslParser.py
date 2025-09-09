@@ -10,36 +10,38 @@ else:
 
 def serializedATN():
     return [
-        4,1,15,98,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,18,105,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,1,0,1,0,1,0,1,1,4,
         1,29,8,1,11,1,12,1,30,1,2,1,2,1,2,1,2,1,2,1,3,1,3,1,4,1,4,1,5,1,
         5,1,5,1,5,5,5,46,8,5,10,5,12,5,49,9,5,1,6,1,6,1,6,1,6,3,6,55,8,6,
         1,7,1,7,1,7,1,7,1,7,1,7,5,7,63,8,7,10,7,12,7,66,9,7,1,8,1,8,1,8,
         1,8,1,8,1,8,5,8,74,8,8,10,8,12,8,77,9,8,1,9,1,9,1,9,1,9,1,9,1,9,
-        1,9,1,9,1,9,1,9,1,9,1,9,1,9,3,9,92,8,9,1,10,1,10,1,11,1,11,1,11,
-        0,2,14,16,12,0,2,4,6,8,10,12,14,16,18,20,22,0,2,1,0,3,4,1,0,5,6,
-        95,0,24,1,0,0,0,2,28,1,0,0,0,4,32,1,0,0,0,6,37,1,0,0,0,8,39,1,0,
-        0,0,10,41,1,0,0,0,12,50,1,0,0,0,14,56,1,0,0,0,16,67,1,0,0,0,18,91,
-        1,0,0,0,20,93,1,0,0,0,22,95,1,0,0,0,24,25,3,2,1,0,25,26,5,0,0,1,
-        26,1,1,0,0,0,27,29,3,4,2,0,28,27,1,0,0,0,29,30,1,0,0,0,30,28,1,0,
-        0,0,30,31,1,0,0,0,31,3,1,0,0,0,32,33,5,1,0,0,33,34,3,6,3,0,34,35,
-        5,2,0,0,35,36,3,8,4,0,36,5,1,0,0,0,37,38,5,12,0,0,38,7,1,0,0,0,39,
-        40,3,10,5,0,40,9,1,0,0,0,41,47,3,12,6,0,42,43,3,22,11,0,43,44,3,
-        12,6,0,44,46,1,0,0,0,45,42,1,0,0,0,46,49,1,0,0,0,47,45,1,0,0,0,47,
-        48,1,0,0,0,48,11,1,0,0,0,49,47,1,0,0,0,50,54,3,14,7,0,51,52,3,20,
-        10,0,52,53,3,14,7,0,53,55,1,0,0,0,54,51,1,0,0,0,54,55,1,0,0,0,55,
-        13,1,0,0,0,56,57,6,7,-1,0,57,58,3,16,8,0,58,64,1,0,0,0,59,60,10,
-        2,0,0,60,61,7,0,0,0,61,63,3,16,8,0,62,59,1,0,0,0,63,66,1,0,0,0,64,
-        62,1,0,0,0,64,65,1,0,0,0,65,15,1,0,0,0,66,64,1,0,0,0,67,68,6,8,-1,
-        0,68,69,3,18,9,0,69,75,1,0,0,0,70,71,10,2,0,0,71,72,7,1,0,0,72,74,
-        3,18,9,0,73,70,1,0,0,0,74,77,1,0,0,0,75,73,1,0,0,0,75,76,1,0,0,0,
-        76,17,1,0,0,0,77,75,1,0,0,0,78,92,5,11,0,0,79,92,5,13,0,0,80,92,
-        5,14,0,0,81,92,5,12,0,0,82,83,5,7,0,0,83,84,3,8,4,0,84,85,5,8,0,
-        0,85,92,1,0,0,0,86,87,5,12,0,0,87,88,5,7,0,0,88,89,3,8,4,0,89,90,
-        5,8,0,0,90,92,1,0,0,0,91,78,1,0,0,0,91,79,1,0,0,0,91,80,1,0,0,0,
-        91,81,1,0,0,0,91,82,1,0,0,0,91,86,1,0,0,0,92,19,1,0,0,0,93,94,5,
-        9,0,0,94,21,1,0,0,0,95,96,5,10,0,0,96,23,1,0,0,0,6,30,47,54,64,75,
-        91
+        1,9,1,9,1,9,1,9,1,9,1,9,1,9,5,9,92,8,9,10,9,12,9,95,9,9,1,9,1,9,
+        3,9,99,8,9,1,10,1,10,1,11,1,11,1,11,0,2,14,16,12,0,2,4,6,8,10,12,
+        14,16,18,20,22,0,2,1,0,3,4,1,0,5,6,103,0,24,1,0,0,0,2,28,1,0,0,0,
+        4,32,1,0,0,0,6,37,1,0,0,0,8,39,1,0,0,0,10,41,1,0,0,0,12,50,1,0,0,
+        0,14,56,1,0,0,0,16,67,1,0,0,0,18,98,1,0,0,0,20,100,1,0,0,0,22,102,
+        1,0,0,0,24,25,3,2,1,0,25,26,5,0,0,1,26,1,1,0,0,0,27,29,3,4,2,0,28,
+        27,1,0,0,0,29,30,1,0,0,0,30,28,1,0,0,0,30,31,1,0,0,0,31,3,1,0,0,
+        0,32,33,5,1,0,0,33,34,3,6,3,0,34,35,5,2,0,0,35,36,3,8,4,0,36,5,1,
+        0,0,0,37,38,5,13,0,0,38,7,1,0,0,0,39,40,3,10,5,0,40,9,1,0,0,0,41,
+        47,3,12,6,0,42,43,3,22,11,0,43,44,3,12,6,0,44,46,1,0,0,0,45,42,1,
+        0,0,0,46,49,1,0,0,0,47,45,1,0,0,0,47,48,1,0,0,0,48,11,1,0,0,0,49,
+        47,1,0,0,0,50,54,3,14,7,0,51,52,3,20,10,0,52,53,3,14,7,0,53,55,1,
+        0,0,0,54,51,1,0,0,0,54,55,1,0,0,0,55,13,1,0,0,0,56,57,6,7,-1,0,57,
+        58,3,16,8,0,58,64,1,0,0,0,59,60,10,2,0,0,60,61,7,0,0,0,61,63,3,16,
+        8,0,62,59,1,0,0,0,63,66,1,0,0,0,64,62,1,0,0,0,64,65,1,0,0,0,65,15,
+        1,0,0,0,66,64,1,0,0,0,67,68,6,8,-1,0,68,69,3,18,9,0,69,75,1,0,0,
+        0,70,71,10,2,0,0,71,72,7,1,0,0,72,74,3,18,9,0,73,70,1,0,0,0,74,77,
+        1,0,0,0,75,73,1,0,0,0,75,76,1,0,0,0,76,17,1,0,0,0,77,75,1,0,0,0,
+        78,99,5,12,0,0,79,99,5,14,0,0,80,99,5,15,0,0,81,99,5,13,0,0,82,83,
+        5,7,0,0,83,84,3,8,4,0,84,85,5,8,0,0,85,99,1,0,0,0,86,87,5,13,0,0,
+        87,88,5,7,0,0,88,93,3,8,4,0,89,90,5,9,0,0,90,92,3,8,4,0,91,89,1,
+        0,0,0,92,95,1,0,0,0,93,91,1,0,0,0,93,94,1,0,0,0,94,96,1,0,0,0,95,
+        93,1,0,0,0,96,97,5,8,0,0,97,99,1,0,0,0,98,78,1,0,0,0,98,79,1,0,0,
+        0,98,80,1,0,0,0,98,81,1,0,0,0,98,82,1,0,0,0,98,86,1,0,0,0,99,19,
+        1,0,0,0,100,101,5,10,0,0,101,21,1,0,0,0,102,103,5,11,0,0,103,23,
+        1,0,0,0,7,30,47,54,64,75,93,98
     ]
 
 class fdslParser ( Parser ):
@@ -53,12 +55,13 @@ class fdslParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'feature:'", "'='", "'+'", "'-'", "'*'", 
-                     "'/'", "'('", "')'" ]
+                     "'/'", "'('", "')'", "','" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "COMPARE_OP", "LOGICAL_OP", "NUMBER", 
-                      "IDENTIFIER", "STRING", "BOOL", "WS" ]
+                      "<INVALID>", "<INVALID>", "COMPARE_OP", "LOGICAL_OP", 
+                      "NUMBER", "IDENTIFIER", "STRING", "BOOL", "WS", "LINE_COMMENT", 
+                      "BLOCK_COMMENT" ]
 
     RULE_program = 0
     RULE_feats = 1
@@ -86,13 +89,16 @@ class fdslParser ( Parser ):
     T__5=6
     T__6=7
     T__7=8
-    COMPARE_OP=9
-    LOGICAL_OP=10
-    NUMBER=11
-    IDENTIFIER=12
-    STRING=13
-    BOOL=14
-    WS=15
+    T__8=9
+    COMPARE_OP=10
+    LOGICAL_OP=11
+    NUMBER=12
+    IDENTIFIER=13
+    STRING=14
+    BOOL=15
+    WS=16
+    LINE_COMMENT=17
+    BLOCK_COMMENT=18
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -424,7 +430,7 @@ class fdslParser ( Parser ):
             self.state = 47
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==10:
+            while _la==11:
                 self.state = 42
                 self.logicalOp()
                 self.state = 43
@@ -492,7 +498,7 @@ class fdslParser ( Parser ):
             self.state = 54
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==9:
+            if _la==10:
                 self.state = 51
                 self.compareOp()
                 self.state = 52
@@ -693,8 +699,11 @@ class fdslParser ( Parser ):
         def IDENTIFIER(self):
             return self.getToken(fdslParser.IDENTIFIER, 0)
 
-        def expr(self):
-            return self.getTypedRuleContext(fdslParser.ExprContext,0)
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(fdslParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(fdslParser.ExprContext,i)
 
 
         def getRuleIndex(self):
@@ -721,10 +730,11 @@ class fdslParser ( Parser ):
 
         localctx = fdslParser.FactorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_factor)
+        self._la = 0 # Token type
         try:
-            self.state = 91
+            self.state = 98
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 78
@@ -767,7 +777,19 @@ class fdslParser ( Parser ):
                 self.match(fdslParser.T__6)
                 self.state = 88
                 self.expr()
-                self.state = 89
+                self.state = 93
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==9:
+                    self.state = 89
+                    self.match(fdslParser.T__8)
+                    self.state = 90
+                    self.expr()
+                    self.state = 95
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+
+                self.state = 96
                 self.match(fdslParser.T__7)
                 pass
 
@@ -817,7 +839,7 @@ class fdslParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_compareOp)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 93
+            self.state = 100
             self.match(fdslParser.COMPARE_OP)
         except RecognitionException as re:
             localctx.exception = re
@@ -864,7 +886,7 @@ class fdslParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_logicalOp)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 95
+            self.state = 102
             self.match(fdslParser.LOGICAL_OP)
         except RecognitionException as re:
             localctx.exception = re
